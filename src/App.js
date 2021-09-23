@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import styles from "./App.module.css";
+import Cloud from "./components/Cloud/Cloud";
+import Rocket from "./components/Rocket/Rocket";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div className={styles.mainWrapper}>
+        <div className={styles.wrapperLeft}>div 1</div>
+        <div className={styles.wrapperRight}>
+          <Cloud />
+          <Rocket />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;

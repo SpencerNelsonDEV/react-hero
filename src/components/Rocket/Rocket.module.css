@@ -1,0 +1,9 @@
+.rocketWrapper {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+}
+
+.rocketImg {
+  width: 30%;
+}

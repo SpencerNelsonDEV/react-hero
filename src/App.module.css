@@ -1,0 +1,17 @@
+.mainWrapper {
+  background-color: darkslategray;
+  display: flex;
+  padding: 0.6rem;
+  width: 100vw;
+}
+
+.wrapperLeft {
+  width: 50vw;
+  height: 95vh;
+}
+
+.wrapperRight {
+  background-color: rgb(9, 109, 109);
+  width: 50vw;
+  height: 95vh;
+}

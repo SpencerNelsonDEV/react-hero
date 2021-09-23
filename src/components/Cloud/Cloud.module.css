@@ -1,0 +1,9 @@
+.cloudContainer {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+}
+
+.cloudImage {
+  width: 100%;
+}
