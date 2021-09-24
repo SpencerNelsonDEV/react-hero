@@ -1,0 +1,14 @@
+.goal {
+  background-color: rgb(28, 176, 212);
+  border: 3px dashed rgb(49, 201, 49);
+  border-radius: 50%;
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  color: rgb(75, 62, 4);
+  text-align: center;
+  padding: 0.6rem;
+  padding-top: 1.2rem;
+  vertical-align: middle;
+  line-height: 1.2rem;
+}

@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import styles from "./App.module.css";
 import Cloud from "./components/Cloud/Cloud";
 import Rocket from "./components/Rocket/Rocket";
+import Goal from "./components/Goal/Goal";
 
-class App extends React.Component {
+class App extends Component {
   state = {
     rocketPosition: {
       x: window.innerWidth / 2 + window.innerWidth / 4 - 100,
@@ -12,6 +13,10 @@ class App extends React.Component {
     cloudPosition: {
       x: window.innerWidth / 2,
       y: 50,
+    },
+    goalPosition: {
+      x: window.innerWidth / 2 + window.innerWidth / 4 - 100,
+      y: window.innerHeight - 200,
     },
   };
 
@@ -35,13 +40,14 @@ class App extends React.Component {
   };
 
   render() {
-    const { rocketPosition, cloudPosition } = this.state;
+    const { rocketPosition, cloudPosition, goalPosition } = this.state;
     return (
       <div className={styles.mainWrapper}>
         <div className={styles.wrapperLeft}>div 1</div>
         <div className={styles.wrapperRight}>
           <Cloud position={cloudPosition} />
           <Rocket position={rocketPosition} />
+          <Goal position={goalPosition} />
         </div>
       </div>
     );
