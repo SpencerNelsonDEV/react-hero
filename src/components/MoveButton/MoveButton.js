@@ -1,9 +1,14 @@
 import React from "react";
+import styles from "./MoveButton.module.css";
 
-const MoveButton = () => {
+const MoveButton = ({ direction }) => {
   return (
     <div>
-      <button></button>
+      <button 
+      className={`${styles.moveButton} ${styles[direction]}`}
+      onClick={}
+      >{direction}
+      </button>
     </div>
   );
 };

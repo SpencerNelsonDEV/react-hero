@@ -49,6 +49,7 @@ class App extends Component {
       <div className={styles.mainWrapper}>
         <div className={styles.wrapperLeft}>
           <DataDisply data={data} />
+          <RocketContorls />
         </div>
         <div className={styles.wrapperRight}>
           <Cloud position={cloudPosition} />

@@ -6,14 +6,14 @@ const RocketControls = () => {
   return (
     <div className={styles.buttonContainer}>
       <div className={styles.row}>
-        <MoveButton />
+        <MoveButton direction={"up"} />
       </div>
       <div className={styles.row}>
-        <MoveButton />
-        <MoveButton />
+        <MoveButton direction={"left"} />
+        <MoveButton direction={"right"} />
       </div>
       <div className={styles.row}>
-        <MoveButton />
+        <MoveButton direction={"down"} />
       </div>
     </div>
   );
