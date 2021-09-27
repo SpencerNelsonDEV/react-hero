@@ -1,9 +1,9 @@
 .goal {
   background-color: rgb(28, 176, 212);
-  border: 3px dashed rgb(49, 201, 49);
+  border: 8px dashed rgb(49, 201, 49);
   border-radius: 50%;
-  width: 100px;
-  height: 50px;
+  width: 120px;
+  height: 100px;
   position: absolute;
   color: rgb(75, 62, 4);
   text-align: center;

@@ -9,8 +9,8 @@ import Goal from "./components/Goal/Goal";
 class App extends Component {
   state = {
     rocketPosition: {
-      x: window.innerWidth / 2 + window.innerWidth / 4 - 100,
-      y: window.innerHeight / 2 - 100,
+      x: window.innerWidth / 2 + window.innerWidth / 4 - 50,
+      y: window.innerHeight / 2 - 200,
     },
     cloudPosition: {
       x: window.innerWidth / 2,
@@ -18,7 +18,7 @@ class App extends Component {
     },
     goalPosition: {
       x: window.innerWidth / 2 + window.innerWidth / 4 - 100,
-      y: window.innerHeight - 200,
+      y: window.innerHeight - 150,
     },
     achievedGoal: false,
   };
@@ -28,16 +28,16 @@ class App extends Component {
   }
 
   updateRocket = (moveValue) => {
-    console.log("moveValue", moveValue);
-    const { rocketPosition } = this.state;
+    const { rocketPosition, goalPosition } = this.state;
 
     const newRocketPosition = {
       x: rocketPosition.x + moveValue.x,
       y: rocketPosition.y + moveValue.y,
     };
-    console.log("x and y", rocketPosition.x, rocketPosition.y);
-    console.log("newRocketPosition", newRocketPosition);
-    this.setState({ rocketPosition: newRocketPosition });
+
+    const updatedAchievedGoal = newRocketPosition.y > goalPosition.y - 85;
+
+    this.setState({ rocketPosition: newRocketPosition, achievedGoal: updatedAchievedGoal });
   };
 
   updateCloudPosition = () => {
@@ -66,7 +66,7 @@ class App extends Component {
         </div>
         <div className={styles.wrapperRight}>
           <Cloud position={cloudPosition} />
-          <Rocket position={rocketPosition} />
+          <Rocket position={rocketPosition} achievedGoal={achievedGoal} />
           <Goal position={goalPosition} />
         </div>
       </div>
