@@ -27,6 +27,19 @@ class App extends Component {
     this.updateCloudPosition();
   }
 
+  updateRocket = (moveValue) => {
+    console.log("moveValue", moveValue);
+    const { rocketPosition } = this.state;
+
+    const newRocketPosition = {
+      x: rocketPosition.x + moveValue.x,
+      y: rocketPosition.y + moveValue.y,
+    };
+    console.log("x and y", rocketPosition.x, rocketPosition.y);
+    console.log("newRocketPosition", newRocketPosition);
+    this.setState({ rocketPosition: newRocketPosition });
+  };
+
   updateCloudPosition = () => {
     const { cloudPosition } = this.state;
     let newCloudPosition;
@@ -49,7 +62,7 @@ class App extends Component {
       <div className={styles.mainWrapper}>
         <div className={styles.wrapperLeft}>
           <DataDisply data={data} />
-          <RocketContorls />
+          <RocketContorls updateParent={this.updateRocket} />
         </div>
         <div className={styles.wrapperRight}>
           <Cloud position={cloudPosition} />
